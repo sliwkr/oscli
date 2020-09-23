@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+import oscli
+
+if __name__ == '__main__':
+  pass # TODO: link with actual module
