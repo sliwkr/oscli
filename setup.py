@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="oscli",
-    version="0.0.1",
+    version="0.0.0",
     author="Krzysztof Ś",
     author_email="papierukartka@gmail.com",
     description="OpenSubtitles CLI",
@@ -18,7 +18,12 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    scripts=['bin/oscli'],
+    install_requires=[
+        'Click',
+    ],
+    entry_points='''
+        [console_scripts]
+        oscli=oscli.main:cli
+    ''',
     python_requires='>=3.6',
-    # TODO: install_requires
 )
